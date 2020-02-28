@@ -18,10 +18,10 @@ using namespace std;
 
 class Shader {
 public:
-	Shader(const char* rutaVertexShader, const char rRutaFragmentShader);
+	Shader(const char* rutaVertexShader, const char* rRutaFragmentShader);
 	GLuint getID();
 private:
 	GLuint shaderID;
-
+	void verificarCompilacion(GLuint id);
 };
 
