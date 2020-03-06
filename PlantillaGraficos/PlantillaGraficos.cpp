@@ -19,7 +19,7 @@ using namespace std;
 
 //Cada elemento que queramos renderear necesita un vertex array y un buffer
 vector <Vertice> triangulo;
-GLuint vertexArrayTriangulo;
+GLuint vertexArrayTrianguloID;
 GLuint bufferTrianguloID;
 
 //Instancia del shader
@@ -83,6 +83,28 @@ int main()
     const char* rutaVertexShader = "VertexShader.shader";
     const char* rutaFragmentShader = "FragmentShader.shader";
     shader = new Shader(rutaVertexShader, rutaFragmentShader);
+
+    //mapeo de atributos
+    posicionID = glGetAttribLocation(shader->getID(), "posicion");
+    colorID = glGetAttribLocation(shader->getID(), "color");
+
+    shader->desenlazar();
+
+    //crear el vertex array del triangulo
+    glGenVertexArrays(1, &vertexArrayTrianguloID);
+    glBindVertexArray(vertexArrayTrianguloID);
+
+    //vertex buffer
+    glGenBuffers(1, &bufferTrianguloID);
+    glBindBuffer(GL_ARRAY_BUFFER, bufferTrianguloID);
+    //asociar datos al buffer
+    glBufferData(GL_ARRAY_BUFFER, sizeof(Vertice) * triangulo.size(), triangulo.data(), GL_STATIC_DRAW);
+    //habilirar atributos de shader
+    glEnableVertexAttribArray(posicionID);
+    glEnableVertexAttribArray(colorID);
+    //especificar a OpenGL como comunicarse
+    glVertexAttribPointer(posicionID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertice), 0);
+
 
     //ciclo de dibujo (Draw Loop)
     while (!glfwWindowShouldClose(window)) {
