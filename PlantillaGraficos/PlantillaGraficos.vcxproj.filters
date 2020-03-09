@@ -31,10 +31,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="VetexShader.shader">
+    <None Include="FragmentShader.shader">
       <Filter>Archivos de origen</Filter>
     </None>
-    <None Include="FragmentShader.shader">
+    <None Include="VertexShader.shader">
       <Filter>Archivos de origen</Filter>
     </None>
   </ItemGroup>
