@@ -159,7 +159,7 @@ int main()
     glEnableVertexAttribArray(colorID);
 
     glVertexAttribPointer(posicionID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertice), 0);
-    glVertexAttribPointer(colorID, 4, GL_FLAT, GL_FALSE, sizeof(Vertice), (void*)sizeof(vec3));
+    glVertexAttribPointer(colorID, 4, GL_FLOAT, GL_FALSE, sizeof(Vertice), (void*)sizeof(vec3));
 
 
     //Soltar el vertex array y el buffer
