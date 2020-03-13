@@ -1,0 +1,38 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"projectIndex" : 0,
+					"source" : "."
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project"
+				}
+			],
+			"targets" : []
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Trabajo Escolar/Sexto Semestre/Graficos/Plantilla Shaders/PlantillaGraficos-master/PlantillaGraficos/include/glmx/out/build/x64-Debug",
+		"source" : "D:/Trabajo Escolar/Sexto Semestre/Graficos/Plantilla Shaders/PlantillaGraficos-master/PlantillaGraficos/include/glmx"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
